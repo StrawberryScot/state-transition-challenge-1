@@ -30,11 +30,11 @@
 
 ```mermaid
 sequenceDiagram
-  account-does-not-exist --> account-exists-but-unverified : sign up
-  account-exists-but-unverified --> account-has-user-logged-out : verify account
-  account-has-user-logged-out --> account-has-user-logged-in : log in
-  account-has-user-logged-in --> account-has-user-logged-out : log out
-  account-has-user-logged-in --> account-is-deleted : delete account
-  account-is-deleted --> account-does-not-exist : 30 day period
+  account-does-not-exist ->> account-exists-but-unverified : sign up
+  account-exists-but-unverified ->> account-has-user-logged-out : verify account
+  account-has-user-logged-out ->> account-has-user-logged-in : log in
+  account-has-user-logged-in ->> account-has-user-logged-out : log out
+  account-has-user-logged-in ->> account-is-deleted : delete account
+  account-is-deleted ->> account-does-not-exist : 30 day period
 ```
 ```
