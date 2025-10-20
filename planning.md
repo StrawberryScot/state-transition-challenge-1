@@ -37,4 +37,24 @@ sequenceDiagram
   account-has-user-logged-in ->> account-is-deleted : delete account
   account-is-deleted ->> account-does-not-exist : 30 day period
 ```
-```
+
+## test case
+
+### starting from 'account-does-not-exist'
+
+1. sign up --> moves to account-exists-but-unverified
+  - check the account appears in the database (as unverified)
+2. verify account --> moves to account-has-user-logged-out
+  - check the account in the database is now marked as verified
+3. log in --> moves to account-has-user-logged-in
+  - check there is a new session active
+4. log out --> moves to account-has-user-logged-out
+  - check the session has been cleared
+5. log in --> moves to account-has-user-logged-in
+  - check there is a new session active
+6. delete account --> moves to account-is-deleted
+  - check account has been moved to deleted accounts in the database
+7. 30 days pass (mock) --> moves to account-does-not-exist
+  - check account is no longer in the database
+8. sign up --> moves to account-exists-but-unverified
+  - check the account appears in the database (as unverified)
