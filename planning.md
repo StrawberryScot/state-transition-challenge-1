@@ -2,7 +2,6 @@
 
 - account does not exist
 - account exists (unverified)
-- account is verified
 - account has user logged out
 - account has user logged in
 - account is deleted
