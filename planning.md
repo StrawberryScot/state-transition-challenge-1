@@ -35,9 +35,9 @@
 stateDiagram-v2
   account_does_not_exist --> account_exists_but_unverified : sign up
   account_exists_but_unverified --> account_has_user_logged_out : verify account
-  account_has_user_logged-out --> account_has_user_logged_in : log in
-  account_has_user_logged-in --> account_has_user_logged_out : log out
-  account_has_user_logged-in --> account_is_deleted : delete account
+  account_has_user_logged_out --> account_has_user_logged_in : log in
+  account_has_user_logged_in --> account_has_user_logged_out : log out
+  account_has_user_logged_in --> account_is_deleted : delete account
   account_is_deleted --> account_does_not_exist : 30 day period
 ```
 
