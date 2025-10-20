@@ -30,6 +30,7 @@
 
 ```mermaid
 ```
+sequenceDiagram
   [*] --> account-does-not-exist
 
   account-does-not-exist --> account-exists-but-unverified : sign up
