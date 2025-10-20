@@ -29,7 +29,6 @@
 ## state transition diagram
 
 ```mermaid
-```
 sequenceDiagram
   [*] --> account-does-not-exist
 
