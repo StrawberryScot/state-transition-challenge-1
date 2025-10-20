@@ -32,7 +32,7 @@
 ## state transition diagram
 
 ```mermaid
-sequenceDiagram
+stateDiagram-v2
   account-does-not-exist ->> account-exists-but-unverified : sign up
   account-exists-but-unverified ->> account-has-user-logged-out : verify account
   account-has-user-logged-out ->> account-has-user-logged-in : log in
