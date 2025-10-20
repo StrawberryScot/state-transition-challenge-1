@@ -21,7 +21,10 @@
 | --------------- | --------------- | --------------- | --------------- |
 | account does not exist | sign up | account exists | account pending verification |
 | account exists (unverified) | verify account | account is verified | account verified |
+| account exists (unverified) | log in | account exists (unverified) | no changes |
+| account exists (unverified) | sign up | account exists (unverified) | no changes |
 | account has user logged out | log in | account is logged in | user session created |
+| account has user logged out | sign up | account has user logged out | no changes |
 | account has user logged in | log out | account is logged out | user logged out |
 | account has user logged in | delete account | account is deleted | account deleted by user |
 | account is deleted | delete account | account is deleted | account deleted by user |
